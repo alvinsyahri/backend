@@ -24,7 +24,7 @@ mongoose.connect(url, {
 })
 
 app.use(cors({
-  origin: ["http://localhost:5174"],
+  origin: ["https://frontend-xi-seven.vercel.app/"],
   methods: ["POST", "GET", "DELETE", "PATCH", "PUT"],
   credentials: true
 }));
