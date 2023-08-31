@@ -31,6 +31,7 @@ module.exports = {
           }
 
           const token = jwt.sign(data, "12321kamsda-123nasda-12", {expiresIn: '1d'});
+          req.session.token = token;
           res.cookie('token', token);
           res.json({Login: true, username: req.session.username, isAdmin: user.isAdmin, valid: true, Token: token});
     

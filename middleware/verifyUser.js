@@ -4,7 +4,7 @@ module.exports = {
     
     verifyUser : (req, res, next) => {
         try {
-            const token = req.cookies.token;
+            const token = req.session.token;
             if(!token){
                 res.json({Message: "we need token please provide it for next time", Token: token})
             } else{
