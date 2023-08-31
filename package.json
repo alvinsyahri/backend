@@ -1,7 +1,8 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "proxy": "https://backend-six-peach.vercel.app",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

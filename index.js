@@ -24,7 +24,7 @@ mongoose.connect(url, {
 })
 
 app.use(cors({
-  origin: ["https://inflow.my.id"],
+  origin: ["http://inflow.my.id"],
   methods: ["POST", "GET", "DELETE", "PATCH", "PUT"],
   credentials: true
 }));
@@ -36,7 +36,8 @@ app.use(session({
   resave: false,
   saveUninitialized:false,
   cookie: {
-      secure:true,
+      secure:false,
+      sameSite: "lax",
       maxAge: 1000 * 60 * 60 * 24
   }
 }))
