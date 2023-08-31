@@ -32,12 +32,11 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(session({
-  secret: 'session',
+  secret: 'secret',
   resave: false,
   saveUninitialized:false,
   cookie: {
       secure:false,
-      sameSite: "lax",
       maxAge: 1000 * 60 * 60 * 24
   }
 }))
