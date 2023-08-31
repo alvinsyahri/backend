@@ -24,7 +24,7 @@ mongoose.connect(url, {
 })
 
 app.use(cors({
-  origin: ["http://inflow.my.id"],
+  origin: ["http://localhost:5173/"],
   methods: ["POST", "GET", "DELETE", "PATCH", "PUT"],
   credentials: true
 }));
