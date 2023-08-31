@@ -23,6 +23,11 @@ mongoose.connect(url, {
   console.log("error", err)
 })
 
+app.use(cors({
+  origin: ["https://inflow.my.id"],
+  methods: ["POST", "GET", "DELETE", "PATCH", "PUT"],
+  credentials: true
+}));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
