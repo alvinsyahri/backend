@@ -24,7 +24,7 @@ mongoose.connect(url, {
 })
 
 app.use(cors({
-  origin: ["https://inflow.my.id"],
+  origin: ["https://frontend-xi-seven.vercel.app"],
   methods: ["POST", "GET", "DELETE", "PATCH", "PUT"],
   credentials: true
 }));
