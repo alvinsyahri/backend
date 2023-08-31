@@ -6,7 +6,7 @@ module.exports = {
         try {
             const token = req.cookies.token;
             if(!token){
-                res.json({Message: "we need token please provide it for next time", Token: token})
+                res.json({Message: "we need token please provide it for next time", Token: "token"})
             } else{
                 const username = jwt.verify(token, "12321kamsda-123nasda-12")
                 req.username = username;
